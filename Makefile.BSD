@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -O2 -fPIC
+CFLAGS = -Wall -O2 -fPIC -m32
 TARGET = tgLogLib.so
 SRCS = tgLogLib_mqtt.c tgLogLib_rest.c tgLogLib_mysql.c tgLogLib_influxdb.c
 OBJS = $(SRCS:.c=.o)
