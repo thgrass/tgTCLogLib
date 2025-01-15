@@ -1,10 +1,14 @@
+#ifdef WIN32
+    #include <windows.h>
+#else
+    #include <unistd.h>
+    #include <netinet/in.h> // Für Sockets
+    #include <netdb.h>      // Für gethostbyname
+#endif
 #include "tgLogLib.h"
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <netdb.h>
-#include <string.h>
 #include <stdio.h>
-#include <unistd.h>
+#include <stdlib.h>
+#include <string.h>
 
 int tgLog_REST_Post(const char *url, const char *jsonPayload) {
     char host[128], path[256];
