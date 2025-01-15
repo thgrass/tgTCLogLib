@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -O2 -m32 -DWIN32
+CFLAGS = -Wall -O2 -m32
 LDFLAGS = -shared -m32
 TARGET = tgLogLib.dll
 SRCS = tgLogLib_mqtt.c tgLogLib_rest.c tgLogLib_mysql.c tgLogLib_influxdb.c
