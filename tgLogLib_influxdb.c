@@ -1,13 +1,12 @@
 #ifdef WIN32
     #include <windows.h>
-#else
-    #include <unistd.h>
-    #include <arpa/inet.h>
 #endif
 #include "tgLogLib.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <unistd.h>
+#include <arpa/inet.h>
 
 int tgLog_InfluxDB_Write(const char *host, int port, const char *database, const char *measurement, const char *fields, const char *tags) {
     int sockfd;
