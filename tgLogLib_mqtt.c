@@ -1,13 +1,12 @@
 #ifdef WIN32
     #include <windows.h>
-#else
-    #include <unistd.h>
-    #include <arpa/inet.h>
 #endif
 #include "tgLogLib.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <unistd.h>
+#include <arpa/inet.h>
 
 static int mqttSocket = -1;
 static struct sockaddr_in mqttServerAddr;
