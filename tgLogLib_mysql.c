@@ -1,9 +1,13 @@
+#ifdef WIN32
+    #include <windows.h>
+#else
+    #include <unistd.h>
+    #include <arpa/inet.h> // Für Sockets auf Unix-Systemen
+#endif
 #include "tgLogLib.h"
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
-#include <unistd.h>
-#include <arpa/inet.h>
+#include <string.h>
 
 static int mysqlSocket = -1;
 
